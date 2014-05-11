@@ -4,58 +4,77 @@ public class Alumno
 {
 
 	private String carnet;
-	private String nombre;
-	private String apellido;
+	private String nombreAlumno;
+	private String apellidoAlumno;
 	private String sexo;
-	private int matganadas;
-	public Alumno()
-	{
+	private int ngrupo;
+	private int idcarrera;
+
+
+	public Alumno() {
+
 	}
-	public Alumno(String carnet, String nombre, String apellido, String sexo) 
-	{
+	
+	public Alumno(String carnet, String nombreAlumno, String apellidoAlumno,
+			String sexo, int ngrupo, int idcarrera) {
+		super();
 		this.carnet = carnet;
-		this.nombre = nombre;
-		this.apellido = apellido;
+		this.nombreAlumno = nombreAlumno;
+		this.apellidoAlumno = apellidoAlumno;
 		this.sexo = sexo;
+		this.ngrupo = ngrupo;
+		this.idcarrera = idcarrera;
 	}
-	public String getCarnet() 
-	{
+
+	public String getCarnet() {
 		return carnet;
 	}
-	public void setCarnet(String carnet) 
-	{
+
+	public void setCarnet(String carnet) {
 		this.carnet = carnet;
 	}
-	public String getNombre() 
-	{
-		return nombre;
+
+	public String getNombreAlumno() {
+		return nombreAlumno;
 	}
-	public void setNombre(String nombre) 
-	{
-		this.nombre = nombre;
+
+	public void setNombreAlumno(String nombreAlumno) {
+		this.nombreAlumno = nombreAlumno;
 	}
-	public String getApellido() 
-	{
-		return apellido;
+
+	public String getApellidoAlumno() {
+		return apellidoAlumno;
 	}
-	public void setApellido(String apellido) 
-	{
-		this.apellido = apellido;
+
+	public void setApellidoAlumno(String apellidoAlumno) {
+		this.apellidoAlumno = apellidoAlumno;
 	}
-	public String getSexo() 
-	{
+
+	public String getSexo() {
 		return sexo;
 	}
-	public void setSexo(String sexo) 
-	{
+
+	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public int getMatganadas() 
-	{
-		return matganadas;
+
+	public int getNgrupo() {
+		return ngrupo;
 	}
-	public void setMatganadas(int matganadas) 
-	{
-		this.matganadas = matganadas;
+
+	public void setNgrupo(int ngrupo) {
+		this.ngrupo = ngrupo;
 	}
+
+	public int getIdcarrera() {
+		return idcarrera;
+	}
+
+	public void setIdcarrera(int idcarrera) {
+		this.idcarrera = idcarrera;
+	}
+
+	
+		
+	
 }

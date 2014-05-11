@@ -17,6 +17,9 @@
     <string name="title_activity_docente_menu">DocenteMenu</string>
     <string name="title_activity_perfil_menu">PerfilMenu</string>
     <string name="title_activity_docente_insertar">DocenteInsertar</string>
+    <string name="idDocente">Id</string>
+    <string name="nombreDocente">Nombre</string>
+    <string name="apellidoDocente">Apellido</string>
     <string name="title_activity_docente_eliminar">DocenteEliminar</string>
     <string name="title_activity_docente_modificar">DocenteModificar</string>
     <string name="title_activity_docente_consultar">DocenteConsultar</string>
