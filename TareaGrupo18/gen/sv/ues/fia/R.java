@@ -24,23 +24,25 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080010;
-        public static final int botonConsultar=0x7f080008;
-        public static final int botonLimpiar=0x7f080009;
+        public static final int action_settings=0x7f080012;
+        public static final int botonConsultar=0x7f080006;
+        public static final int botonLimpiar=0x7f080007;
         public static final int editApellido=0x7f080002;
-        public static final int editCCInts=0x7f080006;
-        public static final int editCINstitucion=0x7f08000c;
-        public static final int editCNInst=0x7f08000a;
+        public static final int editCCDoc=0x7f080008;
+        public static final int editCCEsp=0x7f080004;
+        public static final int editCCInts=0x7f08000b;
+        public static final int editCINstitucion=0x7f08000e;
+        public static final int editCNInst=0x7f08000c;
         public static final int editCarnet=0x7f080000;
-        public static final int editECInstitucion=0x7f08000b;
-        public static final int editICEspecialidad=0x7f080004;
-        public static final int editINEspecialidad=0x7f080005;
-        public static final int editMCInstitucion=0x7f08000e;
-        public static final int editMInstitucion=0x7f08000f;
-        public static final int editNInstitucion=0x7f08000d;
+        public static final int editECInstitucion=0x7f08000d;
+        public static final int editICEspecialidad=0x7f080009;
+        public static final int editINEspecialidad=0x7f08000a;
+        public static final int editMCInstitucion=0x7f080010;
+        public static final int editMInstitucion=0x7f080011;
+        public static final int editNInstitucion=0x7f08000f;
         public static final int editNombre=0x7f080001;
         public static final int editSexo=0x7f080003;
-        public static final int linearLayout1=0x7f080007;
+        public static final int linearLayout1=0x7f080005;
     }
     public static final class layout {
         public static final int activity_alumno_consultar=0x7f030000;

@@ -17,6 +17,8 @@ public class ControladorBDG18
 	private SQLiteDatabase db;
 	private static final String[]camposInstitucion = new String []
 			{"IDISTITUCION","NOMBREINSTITUCION"};
+	private static final String[]camposEspecialidad = new String []
+			{"IDESPECIALIDAD","IDDOCENTE"};
 
 	public ControladorBDG18(Context ctx) 
 	{
@@ -120,6 +122,24 @@ public class ControladorBDG18
 			institucion.setIdindtitucion(cursor.getInt(0));
 			institucion.setNombreinstitucion(cursor.getString(1));
 			return institucion;
+		}
+		else
+		{
+			return null;
+		}
+	}
+
+	public Especialidad consultarEspecialidad(String codigoesp)
+	{
+		String[] id = {codigoesp};
+		Cursor cursor = db.query("ESPECIALIDAD", camposEspecialidad, "IDESPECIALIDAD = ?", id,
+		null, null, null);
+		if(cursor.moveToFirst())
+		{
+			Especialidad especialidad = new Especialidad();
+			especialidad.setIdEspecialidad(cursor.getInt(0));
+			especialidad.setIdmaestro(cursor.getString(1));
+			return especialidad;
 		}
 		else
 		{

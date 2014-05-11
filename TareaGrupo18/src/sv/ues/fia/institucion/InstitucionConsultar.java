@@ -29,7 +29,7 @@ public class InstitucionConsultar extends Activity {
 		Institucion institu=helper.consultarInstitucion(editCInst.getText().toString());
 		helper.cerrar();
 		if(institu == null)
-		Toast.makeText(this, "La institucion con carnet " +
+		Toast.makeText(this, "La institucion con codigo " +
 				editCInst.getText().toString() +
 		" no encontrado", Toast.LENGTH_LONG).show();
 		else
