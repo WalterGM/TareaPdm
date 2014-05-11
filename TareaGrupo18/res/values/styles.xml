@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!--
@@ -16,5 +17,11 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+  <style name="estilo1" parent="@android:style/TextAppearance.Medium">
+     <item name="android:layout_width">wrap_content</item>
+     <item name="android:layout_height">wrap_content</item>
+     <item name="android:textColor">#A4C639</item>
+  </style>
 
 </resources>

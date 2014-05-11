@@ -4,16 +4,6 @@ public class Institucion
 {
 	private int idindtitucion=0;
 	private String nombreinstitucion="";
-	
-		
-	public Institucion() {
-		
-	}
-	public Institucion(int idindtitucion, String nombreinstitucion) {
-		super();
-		this.idindtitucion = idindtitucion;
-		this.nombreinstitucion = nombreinstitucion;
-	}
 	public int getIdindtitucion() 
 	{
 		return idindtitucion;

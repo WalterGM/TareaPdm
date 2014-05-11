@@ -39,9 +39,10 @@ public class AlumnoInsertar extends Activity {
 		String regInsertados;
 		Alumno alumno=new Alumno();
 		alumno.setCarnet(carnet);
-		alumno.setNombreAlumno(nombre);
-		alumno.setApellidoAlumno(apellido);
+		alumno.setNombre(nombre);
+		alumno.setApellido(apellido);
 		alumno.setSexo(sexo);
+		alumno.setMatganadas(0);
 		helper.abrir();
 	//	regInsertados=helper.insertar(alumno);
 		helper.cerrar();

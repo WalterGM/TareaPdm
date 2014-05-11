@@ -2,6 +2,7 @@ package sv.ues.fia;
 
 
 import sv.ues.fia.institucion.Institucion;
+import sv.ues.fia.especialidad.Especialidad;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -36,11 +37,16 @@ public class ControladorBDG18
 		{
 			try
 			{
-				//db.execSQL("CREATE TABLE alumno(carnet VARCHAR(7) NOT NULL PRIMARY KEY,nombre VARCHAR(30),apellido VARCHAR(30),sexo VARCHAR(1),matganadas INTEGER);");
 				db.execSQL("create table INSTITUCION" +
 				"("+
 				   "IDISTITUCION         NUMBER(6)            not null PRIMARY KEY,"+
 				   "NOMBREINSTITUCION    VARCHAR2(50)         not null"+
+				");");
+				
+				db.execSQL("create table ESPECIALIDAD"+ 
+				"("+
+				   "IDESPECIALIDAD       INTEGER              not null PRIMARY KEY,"+
+				   "IDDOCENTE            VARCHAR2(20)         not null"+
 				");");
 			}
 			catch(SQLException e)
@@ -72,6 +78,26 @@ public class ControladorBDG18
 		insti.put("IDISTITUCION", institucion.getIdindtitucion());
 		insti.put("NOMBREINSTITUCION", institucion.getNombreinstitucion());
 		contador=db.insert("INSTITUCION", null, insti);
+		if(contador==-1 || contador==0)
+		{
+			regInsertados= "Error al Insertar el registro, Registro Duplicado. Verificar inserción";
+		}
+		else 
+		{
+			regInsertados=regInsertados+contador;
+		}
+		return regInsertados;
+	}
+	
+
+	public String insertar(Especialidad especialidad)
+	{
+		String regInsertados="Registro Insertado Nº= ";
+		long contador=0;
+		ContentValues esp = new ContentValues();
+		esp.put("IDESPECIALIDAD", especialidad.getIdEspecialidad());
+		esp.put("IDDOCENTE", especialidad.getIdmaestro());
+		contador=db.insert("ESPECIALIDAD", null, esp);
 		if(contador==-1 || contador==0)
 		{
 			regInsertados= "Error al Insertar el registro, Registro Duplicado. Verificar inserción";

@@ -162,6 +162,150 @@
             android:name="sv.ues.fia.institucion.InstitucionEliminar"
             android:label="@string/title_activity_institucion_eliminar" >
         </activity>
+        <activity
+            android:name="sv.ues.fia.facultad.FacultadConsultar"
+            android:label="@string/title_activity_facultad_consultar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.facultad.FacultadInsertar"
+            android:label="@string/title_activity_facultad_insertar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.facultad.FacultadEliminar"
+            android:label="@string/title_activity_facultad_eliminar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.facultad.FacultadMenu"
+            android:label="@string/title_activity_facultad_menu" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.facultad.FacultadModificar"
+            android:label="@string/title_activity_facultad_modificar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.carrera.CarreraMenu"
+            android:label="@string/title_activity_carrera_menu" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.carrera.CarreraConsultar"
+            android:label="@string/title_activity_carrera_consultar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.carrera.CarreraEliminar"
+            android:label="@string/title_activity_carrera_eliminar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.carrera.CarreraInsertar"
+            android:label="@string/title_activity_carrera_insertar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.carrera.CarreraModificar"
+            android:label="@string/title_activity_carrera_modificar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.registrobitacora.RegistroBitacoraMenu"
+            android:label="@string/title_activity_registro_bitacora_menu" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.registrobitacora.RegistroBitacoraConsultar"
+            android:label="@string/title_activity_registro_bitacora_consultar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.RegistroBitacora"
+            android:label="@string/title_activity_registro_bitacora" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.registrobitacora.RegistroBitacoraEliminar"
+            android:label="@string/title_activity_registro_bitacora_eliminar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.registrobitacora.RegistroBitacoraInsertar"
+            android:label="@string/title_activity_registro_bitacora_insertar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.registrobitacora.RegistroBitacoraModificar"
+            android:label="@string/title_activity_registro_bitacora_modificar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.tipoespecialidad.TipoEspecialidadMenu"
+            android:label="@string/title_activity_tipo_especialidad_menu" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.tipoespecialidad.TipoEspecialidadConsultar"
+            android:label="@string/title_activity_tipo_especialidad_consultar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.tipoespecialidad.TipoEspecialidadEliminar"
+            android:label="@string/title_activity_tipo_especialidad_eliminar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.tipoespecialidad.TipoEspecialidadInsertar"
+            android:label="@string/title_activity_tipo_especialidad_insertar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.tipoespecialidad.TipoEspecialidadModificar"
+            android:label="@string/title_activity_tipo_especialidad_modificar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.bitacora.BitacoraMenu"
+            android:label="@string/title_activity_bitacora_menu" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.etapa.EtapaMenu"
+            android:label="@string/title_activity_etapa_menu" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.evaluacionetapa.EvaluacionEtapaMenu"
+            android:label="@string/title_activity_evaluacion_etapa_menu" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.bitacora.BitacoraConsultar"
+            android:label="@string/title_activity_bitacora_consultar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.bitacora.BitacoraEliminar"
+            android:label="@string/title_activity_bitacora_eliminar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.bitacora.BitacoraInsertar"
+            android:label="@string/title_activity_bitacora_insertar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.bitacora.BitacoraModificar"
+            android:label="@string/title_activity_bitacora_modificar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.etapa.EtapaConsultar"
+            android:label="@string/title_activity_etapa_consultar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.etapa.EtapaEliminar"
+            android:label="@string/title_activity_etapa_eliminar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.etapa.EtapaInsertar"
+            android:label="@string/title_activity_etapa_insertar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.etapa.EtapaModificar"
+            android:label="@string/title_activity_etapa_modificar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.evaluacionetapa.EvaluacionEtapaConsultar"
+            android:label="@string/title_activity_evaluacion_etapa_consultar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.evaluacionetapa.EvaluacionEtapaEliminar"
+            android:label="@string/title_activity_evaluacion_etapa_eliminar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.evaluacionetapa.EvaluacionEtapaInsertar"
+            android:label="@string/title_activity_evaluacion_etapa_insertar" >
+        </activity>
+        <activity
+            android:name="sv.ues.fia.evaluacionetapa.EvaluacionEtapaModificar"
+            android:label="@string/title_activity_evaluacion_etapa_modificar" >
+        </activity>
     </application>
 
 </manifest>

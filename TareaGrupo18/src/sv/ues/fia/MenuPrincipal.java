@@ -10,9 +10,11 @@ import android.widget.ListView;
 
 public class MenuPrincipal extends ListActivity{
 
-	String[] menu={"Tabla Alumno","Tabla Grupo","Tabla Docente","Tabla Perfil","Trabajo de Graduacion","Tabla de Especialidad","Tabla de Institucion"};
+	String[] menu={"Tabla Alumno","Tabla Grupo","Tabla Docente","Tabla Perfil","Trabajo de Graduacion","Tabla de Especialidad","Tabla de Institucion","Tabla de Facultad","Tabla de Carrera","Tabla de Registro de Bitacora"
+			,"Tabla Tipo de Especialidad","Tabla Bitacora","Tabla Etapa","Tabla Evaluacion de Etapa"};
 			String[]
-			activities={"alumno.AlumnoMenu","grupo.GrupoMenu","docente.DocenteMenu","perfil.PerfilMenu","trabajograduacion.TrabajoGraduacionMenu","especialidad.EspecialidadMenu","institucion.InstitucionMenu"};
+			activities={"alumno.AlumnoMenu","grupo.GrupoMenu","docente.DocenteMenu","perfil.PerfilMenu","trabajograduacion.TrabajoGraduacionMenu","especialidad.EspecialidadMenu","institucion.InstitucionMenu","facultad.FacultadMenu","carrera.CarreraMenu"
+					,"registrobitacora.RegistroBitacoraMenu","tipoespecialidad.TipoEspecialidadMenu","bitacora.BitacoraMenu","etapa.EtapaMenu","evaluacionetapa.EvaluacionEtapaMenu"};
 			ControladorBDG18 BDhelper;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

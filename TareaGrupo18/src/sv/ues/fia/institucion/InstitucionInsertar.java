@@ -1,12 +1,9 @@
 package sv.ues.fia.institucion;
 
 import sv.ues.fia.R;
-import sv.ues.fia.R.layout;
-import sv.ues.fia.R.menu;
 import sv.ues.fia.ControladorBDG18;
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
