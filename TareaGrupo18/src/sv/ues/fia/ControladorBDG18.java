@@ -167,6 +167,28 @@ public class ControladorBDG18
 		}
 		return regAfectados;
 	}
+
+	public String eliminar(Especialidad especialidad)
+	{
+		String regAfectados="filas afectadas= ";
+		int contador=0;
+		if (verificarIntegridad(especialidad,1)) 
+		{
+			regAfectados="0";
+			//aplica para cascada
+			//borrar registros de notas
+			//contador+=db.delete("nota","carnet='"+alumno.getCarnet()+"'", null); ¨
+		}
+		else
+		{
+			//borrar los registros de alumno
+			contador+=db.delete("ESPECIALIDAD", "IDESPECIALIDAD='"+especialidad.getIdEspecialidad()+"'",
+			null);
+			regAfectados+=contador;
+		}
+		return regAfectados;
+	}
+	
 	public String actualizar(Institucion institucion)
 	{
 		if(verificarIntegridad(institucion, 2))

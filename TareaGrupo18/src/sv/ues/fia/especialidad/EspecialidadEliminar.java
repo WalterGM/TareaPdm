@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class EspecialidadEliminar extends Activity {
-	EditText editECInst;
+	EditText editECEsp;
 	ControladorBDG18 controlhelper;
 
 	@Override
@@ -18,16 +18,16 @@ public class EspecialidadEliminar extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_especialidad_eliminar);
 		controlhelper=new ControladorBDG18 (this);
-		editECInst=(EditText)findViewById(R.id.editECInstitucion);
+		editECEsp=(EditText)findViewById(R.id.editEEspecialidad);
 	}
 
 	public void eliminarEspecialidad(View v)
 	{
 		String regEliminadas;
-		Institucion institucion=new Institucion();
-		institucion.setIdindtitucion(Integer.parseInt(editECInst.getText().toString()));
+		Especialidad especialidad=new Especialidad();
+		especialidad.setIdEspecialidad(Integer.parseInt(editECEsp.getText().toString()));
 		controlhelper.abrir();
-		regEliminadas=controlhelper.eliminar(institucion);
+		regEliminadas=controlhelper.eliminar(especialidad);
 		controlhelper.cerrar();
 		Toast.makeText(this, regEliminadas, Toast.LENGTH_SHORT).show();
 	}
