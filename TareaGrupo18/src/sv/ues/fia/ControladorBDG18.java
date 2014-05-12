@@ -204,6 +204,23 @@ public class ControladorBDG18
 			return "Registro con el codigo " + institucion.getIdindtitucion() + " no existe";
 		}
 	}
+	
+
+	public String actualizar(Especialidad especialidad)
+	{
+		if(verificarIntegridad(especialidad, 3))
+		{
+			String[] id = {especialidad.getIdEspecialidad()+""};
+			ContentValues cv = new ContentValues();
+			cv.put("IDDOCENTE",especialidad.getIdmaestro());
+			db.update("ESPECIALIDAD", cv, "IDESPECIALIDAD = ?", id);
+			return "Registro Actualizado Correctamente";
+		}
+		else
+		{
+			return "Registro con el codigo " + especialidad.getIdEspecialidad() + " no existe";
+		}
+	}
 
 	private boolean verificarIntegridad(Object dato, int relacion) throws SQLException
 	{
@@ -229,6 +246,23 @@ public class ControladorBDG18
 				String[] id = {institucion2.getIdindtitucion()+""};
 				abrir();
 				Cursor c2 = db.query("INSTITUCION", null, "IDISTITUCION = ?", id, null, null,
+				null);
+				if(c2.moveToFirst())
+				{
+					//Se encontro Alumno
+					return true;
+				}
+				return false;
+			}
+			
+
+			case 3:
+			{
+				//verificar que exista alumno
+				Especialidad especialidad2 = (Especialidad)dato;
+				String[] id = {especialidad2.getIdEspecialidad()+""};
+				abrir();
+				Cursor c2 = db.query("ESPECIALIDAD", null, "IDESPECIALIDAD = ?", id, null, null,
 				null);
 				if(c2.moveToFirst())
 				{
