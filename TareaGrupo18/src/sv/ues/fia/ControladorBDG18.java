@@ -3,6 +3,7 @@ package sv.ues.fia;
 
 import sv.ues.fia.institucion.Institucion;
 import sv.ues.fia.especialidad.Especialidad;
+import sv.ues.fia.trabajograduacion.TrabajoGraduacion;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -19,6 +20,8 @@ public class ControladorBDG18
 			{"IDISTITUCION","NOMBREINSTITUCION"};
 	private static final String[]camposEspecialidad = new String []
 			{"IDESPECIALIDAD","IDDOCENTE"};
+	private static final String[]camposTrabajoGraduacion = new String []
+			{"NTG","NPERFIL","PORCENAVANCE"};
 
 	public ControladorBDG18(Context ctx) 
 	{
@@ -49,6 +52,13 @@ public class ControladorBDG18
 				"("+
 				   "IDESPECIALIDAD       INTEGER              not null PRIMARY KEY,"+
 				   "IDDOCENTE            VARCHAR2(20)         not null"+
+				");");
+				
+				db.execSQL("create table TRABAJOGRADUACION"+ 
+				"("+
+				   "NTG                  VARCHAR2(10)         not null,"+
+				   "NPERFIL              INTEGER not null,"+
+				   "PORCENAVANCE         NUMBER(3,2)          not null"+
 				");");
 			}
 			catch(SQLException e)
@@ -100,6 +110,27 @@ public class ControladorBDG18
 		esp.put("IDESPECIALIDAD", especialidad.getIdEspecialidad());
 		esp.put("IDDOCENTE", especialidad.getIdmaestro());
 		contador=db.insert("ESPECIALIDAD", null, esp);
+		if(contador==-1 || contador==0)
+		{
+			regInsertados= "Error al Insertar el registro, Registro Duplicado. Verificar inserción";
+		}
+		else 
+		{
+			regInsertados=regInsertados+contador;
+		}
+		return regInsertados;
+	}
+	
+
+	public String insertar(TrabajoGraduacion tgraduacion)
+	{
+		String regInsertados="Registro Insertado Nº= ";
+		long contador=0;
+		ContentValues tg = new ContentValues();
+		tg.put("NTG", tgraduacion.getNtg());
+		tg.put("NPERFIL", tgraduacion.getNperfil());
+		tg.put("PORCENAVANCE", tgraduacion.getPorcentajea());
+		contador=db.insert("TRABAJOGRADUACION", null, tg);
 		if(contador==-1 || contador==0)
 		{
 			regInsertados= "Error al Insertar el registro, Registro Duplicado. Verificar inserción";

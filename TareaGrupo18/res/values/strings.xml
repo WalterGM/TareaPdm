@@ -91,5 +91,8 @@
     <string name="title_activity_evaluacion_etapa_eliminar">EvaluacionEtapaEliminar</string>
     <string name="title_activity_evaluacion_etapa_insertar">EvaluacionEtapaInsertar</string>
     <string name="title_activity_evaluacion_etapa_modificar">EvaluacionEtapaModificar</string>
+    <string name="ntgraduacion">N Trabajo de Graduacion</string>
+    <string name="nperfil">Numero de Perfil</string>
+    <string name="pavance">Porcentaje de Avance</string>
 
 </resources>
