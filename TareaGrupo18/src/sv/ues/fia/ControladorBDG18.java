@@ -56,7 +56,7 @@ public class ControladorBDG18
 				
 				db.execSQL("create table TRABAJOGRADUACION"+ 
 				"("+
-				   "NTG                  VARCHAR2(10)         not null,"+
+				   "NTG                  VARCHAR2(10)         not null PRIMARY KEY,"+
 				   "NPERFIL              INTEGER not null,"+
 				   "PORCENAVANCE         NUMBER(3,2)          not null"+
 				");");
@@ -171,6 +171,26 @@ public class ControladorBDG18
 			especialidad.setIdEspecialidad(cursor.getInt(0));
 			especialidad.setIdmaestro(cursor.getString(1));
 			return especialidad;
+		}
+		else
+		{
+			return null;
+		}
+	}
+	
+
+	public TrabajoGraduacion consultarTrabajoGraduacion(String codigotg)
+	{
+		String[] id = {codigotg};
+		Cursor cursor = db.query("TRABAJOGRADUACION", camposTrabajoGraduacion, "NTG = ?", id,
+		null, null, null);
+		if(cursor.moveToFirst())
+		{
+			TrabajoGraduacion tgraduacion = new TrabajoGraduacion();
+			tgraduacion.setNtg(cursor.getInt(0));
+			tgraduacion.setNperfil(Integer.parseInt(cursor.getString(1)));
+			tgraduacion.setPorcentajea(Float.parseFloat(cursor.getString(2)));
+			return tgraduacion;
 		}
 		else
 		{

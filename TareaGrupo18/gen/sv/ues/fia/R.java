@@ -24,7 +24,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080018;
+        public static final int action_settings=0x7f08001b;
         public static final int botonConsultar=0x7f080006;
         public static final int botonLimpiar=0x7f080007;
         public static final int editApellido=0x7f080002;
@@ -33,14 +33,17 @@ public final class R {
         public static final int editCCInts=0x7f08000e;
         public static final int editCINstitucion=0x7f080011;
         public static final int editCNInst=0x7f08000f;
+        public static final int editCNPerfil=0x7f080016;
+        public static final int editCNTGrad=0x7f080015;
+        public static final int editCPavance=0x7f080017;
         public static final int editCarnet=0x7f080000;
         public static final int editECInstitucion=0x7f080010;
         public static final int editEEspecialidad=0x7f080009;
         public static final int editICEspecialidad=0x7f08000a;
         public static final int editINEspecialidad=0x7f08000b;
-        public static final int editINPerfil=0x7f080016;
-        public static final int editINTGraduacion=0x7f080015;
-        public static final int editIPAvance=0x7f080017;
+        public static final int editINPerfil=0x7f080019;
+        public static final int editINTGraduacion=0x7f080018;
+        public static final int editIPAvance=0x7f08001a;
         public static final int editMCEspecialidad=0x7f08000c;
         public static final int editMCFMaestro=0x7f08000d;
         public static final int editMCInstitucion=0x7f080013;
