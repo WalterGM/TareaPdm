@@ -9,7 +9,7 @@ public class Alumno
 	private String sexo;
 	private int matganadas;
 	
-	///prueba commit
+	
 	public Alumno()
 	{
 	}
