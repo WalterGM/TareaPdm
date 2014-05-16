@@ -240,6 +240,28 @@ public class ControladorBDG18
 		return regAfectados;
 	}
 	
+
+	public String eliminar(TrabajoGraduacion tgraduacion)
+	{
+		String regAfectados="filas afectadas= ";
+		int contador=0;
+		if (verificarIntegridad(tgraduacion,1)) 
+		{
+			regAfectados="0";
+			//aplica para cascada
+			//borrar registros de notas
+			//contador+=db.delete("nota","carnet='"+alumno.getCarnet()+"'", null); ¨
+		}
+		else
+		{
+			//borrar los registros de alumno
+			contador+=db.delete("TRABAJOGRADUACION", "NTG='"+tgraduacion.getNtg()+"'",
+			null);
+			regAfectados+=contador;
+		}
+		return regAfectados;
+	}
+	
 	public String actualizar(Institucion institucion)
 	{
 		if(verificarIntegridad(institucion, 2))
