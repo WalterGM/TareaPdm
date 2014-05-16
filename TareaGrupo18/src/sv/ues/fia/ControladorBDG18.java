@@ -402,6 +402,21 @@ public class ControladorBDG18
 				}
 				return false;
 			}
+			case 5:
+			{
+				//verificar que existe IDespecialidad
+				TipoEspecialidad tespecialidad = (TipoEspecialidad)dato;
+				String[] id={tespecialidad.getIDespecialidad()+""};
+				abrir();
+				Cursor c3=db.query("TIPOESPECIALIDAD",null,"IDESPECIALIDAD = ?",id,null,null,null);
+				if(c3.moveToFirst())
+				{
+					//Se encontro IDESPECIALIDAD
+					return true;
+				}
+				else{
+					return false;}
+			}
 			default:
 			return false;
 		}
