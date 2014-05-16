@@ -24,7 +24,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080023;
+        public static final int action_settings=0x7f080026;
         public static final int botonConsultar=0x7f080006;
         public static final int botonLimpiar=0x7f080007;
         public static final int editApellido=0x7f080002;
@@ -49,7 +49,10 @@ public final class R {
         public static final int editMCEspecialidad=0x7f08000c;
         public static final int editMCFMaestro=0x7f08000d;
         public static final int editMCInstitucion=0x7f08001a;
+        public static final int editMCTGraduacion=0x7f080023;
         public static final int editMInstitucion=0x7f08001b;
+        public static final int editMNPerfil=0x7f080024;
+        public static final int editMPavance=0x7f080025;
         public static final int editNEtapa=0x7f080010;
         public static final int editNInstitucion=0x7f080019;
         public static final int editNombre=0x7f080001;
