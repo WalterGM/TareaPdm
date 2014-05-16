@@ -24,35 +24,42 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001c;
+        public static final int action_settings=0x7f080023;
         public static final int botonConsultar=0x7f080006;
         public static final int botonLimpiar=0x7f080007;
         public static final int editApellido=0x7f080002;
         public static final int editCCDoc=0x7f080008;
         public static final int editCCEsp=0x7f080004;
-        public static final int editCCInts=0x7f08000e;
-        public static final int editCINstitucion=0x7f080011;
-        public static final int editCNInst=0x7f08000f;
-        public static final int editCNPerfil=0x7f080016;
-        public static final int editCNTGrad=0x7f080015;
-        public static final int editCPavance=0x7f080017;
+        public static final int editCCInts=0x7f080015;
+        public static final int editCINstitucion=0x7f080018;
+        public static final int editCNInst=0x7f080016;
+        public static final int editCNPerfil=0x7f08001d;
+        public static final int editCNTGrad=0x7f08001c;
+        public static final int editCPavance=0x7f08001e;
         public static final int editCarnet=0x7f080000;
-        public static final int editECInstitucion=0x7f080010;
-        public static final int editECTGraduacion=0x7f080018;
+        public static final int editECInstitucion=0x7f080017;
+        public static final int editECTGraduacion=0x7f08001f;
         public static final int editEEspecialidad=0x7f080009;
+        public static final int editEvaluacionEtapaCarnet=0x7f080013;
         public static final int editICEspecialidad=0x7f08000a;
         public static final int editINEspecialidad=0x7f08000b;
-        public static final int editINPerfil=0x7f08001a;
-        public static final int editINTGraduacion=0x7f080019;
-        public static final int editIPAvance=0x7f08001b;
+        public static final int editINPerfil=0x7f080021;
+        public static final int editINTGraduacion=0x7f080020;
+        public static final int editIPAvance=0x7f080022;
         public static final int editMCEspecialidad=0x7f08000c;
         public static final int editMCFMaestro=0x7f08000d;
-        public static final int editMCInstitucion=0x7f080013;
-        public static final int editMInstitucion=0x7f080014;
-        public static final int editNInstitucion=0x7f080012;
+        public static final int editMCInstitucion=0x7f08001a;
+        public static final int editMInstitucion=0x7f08001b;
+        public static final int editNEtapa=0x7f080010;
+        public static final int editNInstitucion=0x7f080019;
         public static final int editNombre=0x7f080001;
         public static final int editSexo=0x7f080003;
         public static final int linearLayout1=0x7f080005;
+        public static final int netapa=0x7f08000f;
+        public static final int tableRow1=0x7f08000e;
+        public static final int tableRow2=0x7f080011;
+        public static final int tableRow3=0x7f080014;
+        public static final int textView1=0x7f080012;
     }
     public static final class layout {
         public static final int activity_alumno_consultar=0x7f030000;
@@ -202,6 +209,7 @@ public final class R {
         public static final int trabajo_graduacion_modificar=0x7f070047;
     }
     public static final class string {
+        public static final int Numeroetapa=0x7f05005b;
         public static final int action_settings=0x7f050001;
         public static final int actualizar=0x7f050033;
         public static final int apellido=0x7f050019;
@@ -219,10 +227,10 @@ public final class R {
         public static final int matganadas=0x7f05001b;
         public static final int nombre=0x7f050018;
         public static final int nombreInstitucion=0x7f05002f;
-        public static final int nperfil=0x7f05005b;
+        public static final int nperfil=0x7f05005c;
         public static final int ntgraduacion=0x7f05005a;
         public static final int opciones=0x7f05001e;
-        public static final int pavance=0x7f05005c;
+        public static final int pavance=0x7f05005d;
         public static final int sexo=0x7f05001a;
         public static final int title_activity_alumno_consultar=0x7f050007;
         public static final int title_activity_alumno_eliminar=0x7f050006;
