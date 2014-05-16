@@ -3,6 +3,7 @@ package sv.ues.fia;
 
 import sv.ues.fia.institucion.Institucion;
 import sv.ues.fia.especialidad.Especialidad;
+import sv.ues.fia.tipoespecialidad.TipoEspecialidad;
 import sv.ues.fia.trabajograduacion.TrabajoGraduacion;
 import android.content.ContentValues;
 import android.content.Context;
@@ -54,12 +55,29 @@ public class ControladorBDG18
 				   "IDDOCENTE            VARCHAR2(20)         not null"+
 				");");
 				
+				db.execSQL("create table TIPOESPECIALIDAD"+ 
+						"("+
+						   "IDESPECIALIDAD       INTEGER              not null PRIMARY KEY,"+
+						   "NOMBREESPECIALIDAD   VARCHAR2(50)         not null"+
+						");");
+				
 				db.execSQL("create table TRABAJOGRADUACION"+ 
 				"("+
 				   "NTG                  VARCHAR2(10)         not null PRIMARY KEY,"+
 				   "NPERFIL              INTEGER not null,"+
 				   "PORCENAVANCE         NUMBER(3,2)          not null"+
 				");");
+				
+				db.execSQL("create table BITACORA"+
+						"("+
+						   "IDBITACORA      	INTEGER             not null PRIMARY KEY,"+
+						   "NTG             	VARCHAR2(20)        not null"+
+						   "QUIEN				VARCHAR2(50)		NOT NULL"+
+						   "LUGAR				VARCHAR(50)			NOT NULL"+
+						   "ETAPADESARROLLADA	INTEGER				NOT NULL"+
+						   "HORAINICIO			VARCHAR(20)			NOT NULL"+
+						   "HORAFIN				VARCHAR(20)			NOT NULL"+
+						");");
 			}
 			catch(SQLException e)
 			{
@@ -343,6 +361,14 @@ public class ControladorBDG18
 					return true;
 				}
 				return false;
+			}
+			case 4:
+			{
+				//verificar que exista IDespecialidad
+				TipoEspecialidad tespecialidad=(TipoEspecialidad)dato;
+				String[] id = {tespecialidad.getIDespecialidad()+""};
+				abrir();
+				//Cursor c=db.query("")
 			}
 			default:
 			return false;
