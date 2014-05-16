@@ -15,17 +15,21 @@
 	</TableRow>
 	<TableRow>
 		<TextView android:text="@string/nperfil" />
+
 		<EditText
-			android:id="@+id/editMNPerfil"
-			android:inputType="text"
-			android:maxLength="30" />
+		    android:id="@+id/editMNPerfil"
+		    android:inputType="number"
+		    android:maxLength="30" />
+
 	</TableRow>
 	<TableRow>
 		<TextView android:text="@string/pavance" />
+
 		<EditText
-			android:id="@+id/editMPavance"
-			android:inputType="text"
-			android:maxLength="30" />
+		    android:id="@+id/editMPavance"
+		    android:inputType="numberDecimal"
+		    android:maxLength="30" />
+
 	</TableRow>
 	<TableRow> 
 		<Button

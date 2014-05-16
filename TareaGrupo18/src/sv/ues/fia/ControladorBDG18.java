@@ -294,6 +294,24 @@ public class ControladorBDG18
 			return "Registro con el codigo " + especialidad.getIdEspecialidad() + " no existe";
 		}
 	}
+	
+
+	public String actualizar(TrabajoGraduacion tgraduacion)
+	{
+		if(verificarIntegridad(tgraduacion, 4))
+		{
+			String[] id = {tgraduacion.getNtg()+""};
+			ContentValues cv = new ContentValues();
+			cv.put("NPERFIL",tgraduacion.getNperfil());
+			cv.put("PORCENAVANCE",tgraduacion.getPorcentajea());
+			db.update("TRABAJOGRADUACION", cv, "NTG = ?", id);
+			return "Registro Actualizado Correctamente";
+		}
+		else
+		{
+			return "Registro con el codigo " + tgraduacion.getNtg() + " no existe";
+		}
+	}
 
 	private boolean verificarIntegridad(Object dato, int relacion) throws SQLException
 	{
@@ -336,6 +354,22 @@ public class ControladorBDG18
 				String[] id = {especialidad2.getIdEspecialidad()+""};
 				abrir();
 				Cursor c2 = db.query("ESPECIALIDAD", null, "IDESPECIALIDAD = ?", id, null, null,
+				null);
+				if(c2.moveToFirst())
+				{
+					//Se encontro Alumno
+					return true;
+				}
+				return false;
+			}
+
+			case 4:
+			{
+				//verificar que exista alumno
+				TrabajoGraduacion tgrad = (TrabajoGraduacion)dato;
+				String[] id = {tgrad.getNtg()+""};
+				abrir();
+				Cursor c2 = db.query("TRABAJOGRADUACION", null, "NTG = ?", id, null, null,
 				null);
 				if(c2.moveToFirst())
 				{
