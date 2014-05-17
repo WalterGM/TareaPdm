@@ -349,6 +349,19 @@ public class ControladorBDG18
 			return "Registro con el codigo " + especialidad.getIdEspecialidad() + " no existe";
 		}
 	}
+	public String actualizar(TipoEspecialidad tespecialidad){
+		if(verificarIntegridad(tespecialidad, 5)){
+			String[] id = {tespecialidad.getIDespecialidad()+""};
+			ContentValues cv = new ContentValues();
+			cv.put("IDTIPOESPECIALIDAD",tespecialidad.getIDespecialidad());
+			cv.put("NOMBREESPECIALIDAD", tespecialidad.getNombreEspecialidad());
+			db.update("TIPOESPECIALIDAD", cv, "IDTIPOESPECIALIDAD = ?", id);
+			return "Registro Actualizado Correctamente";
+		}else{
+			return "Registro con CODIGO de especialidad " + tespecialidad.getIDespecialidad()
+					+ " no existe";
+		}
+	}
 	
 
 	public String actualizar(TrabajoGraduacion tgraduacion)
@@ -439,7 +452,7 @@ public class ControladorBDG18
 				TipoEspecialidad tespecialidad = (TipoEspecialidad)dato;
 				String[] id={tespecialidad.getIDespecialidad()+""};
 				abrir();
-				Cursor c3=db.query("TIPOESPECIALIDAD",null,"IDESPECIALIDAD=?",id,null,null,null);
+				Cursor c3=db.query("TIPOESPECIALIDAD",null,"IDTIPOESPECIALIDAD=?",id,null,null,null);
 				if(c3.moveToFirst())
 				{
 					//Se encontro IDESPECIALIDAD
