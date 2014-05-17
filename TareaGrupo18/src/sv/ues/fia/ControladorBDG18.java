@@ -29,10 +29,14 @@ public class ControladorBDG18
 		this.context = ctx;
 		DBHelper = new DatabaseHelper(context);
 	}
+	//Clase para crear la base de datos
 	private static class DatabaseHelper extends SQLiteOpenHelper 
 	{
 		private static final String BASE_DATOS = "tesis.s3db";
 		private static final int VERSION = 1;
+		private static final String TABLA_TIPOESPECIALIDAD = "CREATE TABLE TIPOESPECIALIDAD" +  
+            "(IDTIPOESPECIALIDAD INT PRIMARY KEY, NOMBREESPECIALIDAD TEXT)";
+		//constructor de la clase DatabaseHelper
 		public DatabaseHelper(Context context) 
 		{
 			super(context, BASE_DATOS, null, VERSION);
@@ -55,11 +59,7 @@ public class ControladorBDG18
 				   "IDDOCENTE            VARCHAR2(20)         not null"+
 				");");
 				
-				db.execSQL("create table TIPOESPECIALIDAD"+ 
-						"("+
-						   "IDESPECIALIDAD       INTEGER              not null PRIMARY KEY,"+
-						   "NOMBREESPECIALIDAD   VARCHAR2(50)         not null"+
-						");");
+				db.execSQL(TABLA_TIPOESPECIALIDAD);
 				
 				db.execSQL("create table TRABAJOGRADUACION"+ 
 				"("+
@@ -149,7 +149,7 @@ public class ControladorBDG18
 		String regInsertados="Registro Insertado N°= ";
 		long contador=0;
 		ContentValues tesp= new ContentValues();
-		tesp.put("IDESPECIALIDAD", tespecialidad.getIDespecialidad());
+		tesp.put("IDTIPOESPECIALIDAD", tespecialidad.getIDespecialidad());
 		tesp.put("NOMBREESPECIALIDAD", tespecialidad.getNombreEspecialidad());
 		contador=db.insert("TIPOESPECIALIDAD", null, tesp);
 		if(contador==-1 || contador==0){

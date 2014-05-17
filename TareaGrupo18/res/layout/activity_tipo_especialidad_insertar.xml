@@ -28,6 +28,7 @@
 	</TableRow>
 	<TableRow>
 		<Button
+		    android:onClick="insertarTipoEspecialidad"
 			android:text="@string/insertar" /><!--android:onClick="insertarTipoEspecialidad"-->
 		<Button
 			android:onClick="limpiarTexto"
