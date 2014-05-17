@@ -23,6 +23,8 @@ public class ControladorBDG18
 			{"IDESPECIALIDAD","IDDOCENTE"};
 	private static final String[]camposTrabajoGraduacion = new String []
 			{"NTG","NPERFIL","PORCENAVANCE"};
+	private static final String[]camposTipoEspecialidad = new String []
+			{"IDTIPOESPECIALIDAD","NOMBREESPECIALIDAD"};
 
 	public ControladorBDG18(Context ctx) 
 	{
@@ -214,6 +216,19 @@ public class ControladorBDG18
 		}
 		else
 		{
+			return null;
+		}
+	}
+	public TipoEspecialidad consultarTipoEspecialidad(String idTEspecialidad){
+		String[] id = {idTEspecialidad};
+		Cursor cursor = db.query("TIPOESPECIALIDAD",camposTipoEspecialidad,"IDTIPOESPECIALIDAD = ?",
+				id,null,null,null);
+		if(cursor.moveToFirst()){
+			TipoEspecialidad tespecialidad = new TipoEspecialidad();
+			tespecialidad.setIDespecialidad(cursor.getInt(0));
+			tespecialidad.setNombreEspecialidad(cursor.getString(1));
+			return tespecialidad;
+		}else{
 			return null;
 		}
 	}
