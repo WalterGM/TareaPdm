@@ -294,6 +294,20 @@ public class ControladorBDG18
 		}
 		return regAfectados;
 	}
+	public String eliminar(TipoEspecialidad tespecialidad){
+		String regAfectados="filas afectadas= ";
+		int contador=0;
+		if(verificarIntegridad(tespecialidad,5)){
+			//borrar los registros si existe tipo de especialidad
+			contador+=db.delete("TIPOESPECIALIDAD", "IDTIPOESPECIALIDAD='"+tespecialidad.getIDespecialidad()+"'",
+			null);
+			regAfectados+=contador;
+		}else{
+			//si no existe no elimina.
+			regAfectados="0";
+		}
+		return regAfectados;
+	}
 	
 
 	public String eliminar(TrabajoGraduacion tgraduacion)
