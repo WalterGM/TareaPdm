@@ -2,16 +2,19 @@ package sv.ues.fia.tipoespecialidad;
 
 public class TipoEspecialidad 
 {
-	String IDespecialidad;
+	int IDespecialidad;
 	String NombreEspecialidad;
-	public TipoEspecialidad(String iDespecialidad, String nombreEspecialidad) {
+	public TipoEspecialidad(int iDespecialidad, String nombreEspecialidad) {
 		IDespecialidad = iDespecialidad;
 		NombreEspecialidad = nombreEspecialidad;
 	}
-	public String getIDespecialidad() {
+	public TipoEspecialidad() {
+		// TODO Auto-generated constructor stub
+	}
+	public int getIDespecialidad() {
 		return IDespecialidad;
 	}
-	public void setIDespecialidad(String iDespecialidad) {
+	public void setIDespecialidad(int iDespecialidad) {
 		IDespecialidad = iDespecialidad;
 	}
 	public String getNombreEspecialidad() {

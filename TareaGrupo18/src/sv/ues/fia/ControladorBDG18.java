@@ -145,6 +145,22 @@ public class ControladorBDG18
 		return regInsertados;
 	}
 	
+	public String insertar(TipoEspecialidad tespecialidad){
+		String regInsertados="Registro Insertado N°= ";
+		long contador=0;
+		ContentValues tesp= new ContentValues();
+		tesp.put("IDESPECIALIDAD", tespecialidad.getIDespecialidad());
+		tesp.put("NOMBREESPECIALIDAD", tespecialidad.getNombreEspecialidad());
+		contador=db.insert("TIPOESPECIALIDAD", null, tesp);
+		if(contador==-1 || contador==0){
+			regInsertados="Error al insertar el registro, Registro Duplicado. Verificar insercion";
+		}
+		else{
+			regInsertados=regInsertados+contador;
+		}
+		return regInsertados;
+	}
+	
 
 	public String insertar(TrabajoGraduacion tgraduacion)
 	{
@@ -408,7 +424,7 @@ public class ControladorBDG18
 				TipoEspecialidad tespecialidad = (TipoEspecialidad)dato;
 				String[] id={tespecialidad.getIDespecialidad()+""};
 				abrir();
-				Cursor c3=db.query("TIPOESPECIALIDAD",null,"IDESPECIALIDAD = ?",id,null,null,null);
+				Cursor c3=db.query("TIPOESPECIALIDAD",null,"IDESPECIALIDAD=?",id,null,null,null);
 				if(c3.moveToFirst())
 				{
 					//Se encontro IDESPECIALIDAD
