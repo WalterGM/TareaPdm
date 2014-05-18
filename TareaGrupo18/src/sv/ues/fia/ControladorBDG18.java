@@ -2,7 +2,10 @@ package sv.ues.fia;
 
 
 import sv.ues.fia.institucion.Institucion;
+import sv.ues.fia.carrera.Carrera;
 import sv.ues.fia.especialidad.Especialidad;
+import sv.ues.fia.facultad.Facultad;
+import sv.ues.fia.perfil.Perfil;
 import sv.ues.fia.tipoespecialidad.TipoEspecialidad;
 import sv.ues.fia.trabajograduacion.TrabajoGraduacion;
 import android.content.ContentValues;
@@ -86,6 +89,27 @@ public class ControladorBDG18
 						   "IDBITACORA      	INTEGER             not null PRIMARY KEY,"+
 						   "CARNET				VARCHAR(20)			NOT NULL"+
 						");");
+
+				//Registro de carrera	
+				db.execSQL("create table CARRERA"+ 
+						"("+
+						   "IDCARRERA  		       VARCHAR2(15)              not null PRIMARY KEY,"+
+						   "NOMBCARRERA            VARCHAR2(50)         not null"+
+						");");
+				
+				//Registro de perfil
+				db.execSQL("create table PERFIL"+ 
+						"("+
+						   "NPERFERFIL  		 INTEGER           not null PRIMARY KEY,"+
+						   "ESTADO            	VARCHAR2(10)         not null"+
+						   "OBSERVACIONES		VARCHAR2(50)		 not null"+
+						");");
+				
+				db.execSQL("create table FACULTAD"+ 
+						"("+
+						   "IDFACULTAD  		    VARCHAR2(50)          not null PRIMARY KEY,"+
+						   "NOMBFACULTAD            VARCHAR2(50)         not null"+
+						");");
 			}
 			catch(SQLException e)
 			{
@@ -106,6 +130,64 @@ public class ControladorBDG18
 	public void cerrar()
 	{
 		DBHelper.close();
+	}
+	
+	public String insertar(Carrera carrera)
+	{
+		String regInsertados="Registro Insertado Nº= ";
+		long contador=0;
+		ContentValues carr = new ContentValues();
+		carr.put("IDCARRERA", carrera.getIdcarrera());
+		carr.put("NOMBCARRERA",carrera.getNombcarrera());
+		contador=db.insert("CARRERA", null, carr);
+		if(contador==-1 || contador==0)
+		{
+			regInsertados= "Error al Insertar el registro, Registro Duplicado. Verificar inserción";
+		}
+		else 
+		{
+			regInsertados=regInsertados+contador;
+		}
+		return regInsertados;
+	}
+	
+	public String insertar(Perfil perfil)
+	{
+		String regInsertados="Registro Insertado Nº= ";
+		long contador=0;
+		ContentValues per = new ContentValues();
+		per.put("NPERFIL", perfil.getNperfil());
+		per.put("ESTADO", perfil.getEstado());
+		per.put("OBSERVACIONES",perfil.getObservaciones());
+		contador=db.insert("PERFIL", null, per);
+		if(contador==-1 || contador==0)
+		{
+			regInsertados= "Error al Insertar el registro, Registro Duplicado. Verificar inserción";
+		}
+		else 
+		{
+			regInsertados=regInsertados+contador;
+		}
+		return regInsertados;
+	}
+	
+	public String insertar(Facultad facultad)
+	{
+		String regInsertados="Registro Insertado Nº= ";
+		long contador=0;
+		ContentValues facu = new ContentValues();
+		facu.put("IDFACULTAD", facultad.getIDfacultad());
+		facu.put("NOMBFACULTAD", facultad.getNombFacultad());
+		contador=db.insert("PERFIL", null, facu);
+		if(contador==-1 || contador==0)
+		{
+			regInsertados= "Error al Insertar el registro, Registro Duplicado. Verificar inserción";
+		}
+		else 
+		{
+			regInsertados=regInsertados+contador;
+		}
+		return regInsertados;
 	}
 	
 	public String insertar(Institucion institucion)
