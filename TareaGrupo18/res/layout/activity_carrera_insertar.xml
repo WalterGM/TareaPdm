@@ -5,10 +5,9 @@
 	android:paddingTop="30dip"
 	android:stretchColumns="1" >
 	<TableRow>
-
 		<TextView
-		    style="@style/estilo1"
-		    android:text="@string/ccarrera" />
+		    style="@style/estilo1" 
+		    android:text="@string/ccarrera"/>
 
 		<EditText
 		    android:id="@+id/editICcarrera"

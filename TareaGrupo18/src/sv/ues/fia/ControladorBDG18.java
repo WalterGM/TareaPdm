@@ -105,6 +105,7 @@ public class ControladorBDG18
 						   "OBSERVACIONES		VARCHAR2(50)		 not null"+
 						");");
 				
+				//Registro de facultad
 				db.execSQL("create table FACULTAD"+ 
 						"("+
 						   "IDFACULTAD  		    VARCHAR2(50)          not null PRIMARY KEY,"+
@@ -132,6 +133,7 @@ public class ControladorBDG18
 		DBHelper.close();
 	}
 	
+		
 	public String insertar(Carrera carrera)
 	{
 		String regInsertados="Registro Insertado Nº= ";
@@ -392,6 +394,69 @@ public class ControladorBDG18
 	}
 	
 
+	public String eliminar(Carrera carrera)
+	{
+		String regAfectados="filas afectadas= ";
+		int contador=0;
+		if (verificarIntegridad(carrera,1)) 
+		{
+			regAfectados="0";
+			//aplica para cascada
+			//borrar registros de notas
+			//contador+=db.delete("nota","carnet='"+alumno.getCarnet()+"'", null); ¨
+		}
+		else
+		{
+			//borrar los registros de alumno
+			contador+=db.delete("CARRERA", "IDCARRERA='"+carrera.getIdcarrera()+"'",
+			null);
+			regAfectados+=contador;
+		}
+		return regAfectados;
+	}
+	
+	public String eliminar(Facultad facultad)
+	{
+		String regAfectados="filas afectadas= ";
+		int contador=0;
+		if (verificarIntegridad(facultad,1)) 
+		{
+			regAfectados="0";
+			//aplica para cascada
+			//borrar registros de notas
+			//contador+=db.delete("nota","carnet='"+alumno.getCarnet()+"'", null); ¨
+		}
+		else
+		{
+			//borrar los registros de alumno
+			contador+=db.delete("FACULTAD", "IDFACULTAD='"+facultad.getNombFacultad()+"'",
+			null);
+			regAfectados+=contador;
+		}
+		return regAfectados;
+	}
+	
+	public String eliminar(Perfil perfil)
+	{
+		String regAfectados="filas afectadas= ";
+		int contador=0;
+		if (verificarIntegridad(perfil,1)) 
+		{
+			regAfectados="0";
+			//aplica para cascada
+			//borrar registros de notas
+			//contador+=db.delete("nota","carnet='"+alumno.getCarnet()+"'", null); ¨
+		}
+		else
+		{
+			//borrar los registros de alumno
+			contador+=db.delete("PERFIL", "NPERFIL='"+perfil.getNperfil()+"'",
+			null);
+			regAfectados+=contador;
+		}
+		return regAfectados;
+	}
+	
 	public String eliminar(TrabajoGraduacion tgraduacion)
 	{
 		String regAfectados="filas afectadas= ";

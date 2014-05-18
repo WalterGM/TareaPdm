@@ -37,5 +37,10 @@ public class Perfil
 	public void setObservaciones(String observaciones) {
 		Observaciones = observaciones;
 	}
+
+	public void setNperfil(int parseInt) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
